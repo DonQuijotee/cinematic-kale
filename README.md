@@ -4,6 +4,8 @@ Minecraft 1.21.1 / NeoForge 21.1.230 / Java **JDK** 21 的独立附属模组工�
 
 **Alpha 下载：** [GitHub Releases](https://github.com/DonQuijotee/cinematic-kale/releases/tag/v0.1.0-alpha)。
 
+**直接下载 JAR：** [kaleidoscope-cinematic-0.1.0-alpha.jar](https://github.com/DonQuijotee/cinematic-kale/raw/refs/heads/main/downloads/v0.1.0-alpha/kaleidoscope-cinematic-0.1.0-alpha.jar)。完整附件见 [downloads/v0.1.0-alpha](downloads/v0.1.0-alpha)。
+
 本地构建产物：`build/libs/kaleidoscope-cinematic-0.1.0-alpha.jar`。
 正式 `clean build` 已通过。砧板的 3 项 Minecraft 服务端 GameTest 在 CI 0.18.12 和 0.18.28 Beta 下均通过；客户端已启动到主菜单。你要求自行测试后，已停止进一步游戏验证。
 
