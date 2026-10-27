@@ -1,0 +1,32 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license="MIT"
+[[mods]]
+modId="kaleidoscope_cinematic"
+version="0.1.0-alpha"
+displayName="Kaleidoscope Cinematic"
+description="Independent, menu-less first-person kitchen interactions. Experimental alpha."
+[[dependencies.kaleidoscope_cinematic]]
+modId="neoforge"
+type="required"
+versionRange="[21.1.230,)"
+ordering="NONE"
+side="BOTH"
+[[dependencies.kaleidoscope_cinematic]]
+modId="minecraft"
+type="required"
+versionRange="[1.21.1]"
+ordering="NONE"
+side="BOTH"
+[[dependencies.kaleidoscope_cinematic]]
+modId="kaleidoscope_cookery"
+type="required"
+versionRange="[1.6.0,1.7)"
+ordering="AFTER"
+side="BOTH"
+[[dependencies.kaleidoscope_cinematic]]
+modId="cinematic"
+type="required"
+versionRange="[0.18.12,0.19)"
+ordering="AFTER"
+side="BOTH"

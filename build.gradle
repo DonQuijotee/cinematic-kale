@@ -1,0 +1,33 @@
+plugins {
+    id 'java-library'
+    id 'net.neoforged.moddev' version '2.0.95'
+}
+group = 'dev.kaleidoscope.cinematic'
+version = '0.1.0-alpha'
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+java.withSourcesJar()
+neoForge {
+    version = '21.1.230'
+    runs {
+        client { client(); gameDirectory = file('run/client') }
+        gameTestServer {
+            type = 'gameTestServer'
+            gameDirectory = file('run/gametest')
+            systemProperty 'neoforge.enabledGameTestNamespaces', 'kaleidoscope_cinematic'
+        }
+        server { server(); gameDirectory = file('run/server'); programArgument '--nogui' }
+    }
+    mods { kaleidoscope_cinematic { sourceSet sourceSets.main } }
+}
+repositories { mavenCentral() }
+dependencies {
+    implementation files('libs/kaleidoscopecookery-1.6.0-neoforge+mc1.21.1.jar')
+    implementation files(providers.gradleProperty('cinematicJar').getOrElse('libs/CinematicInteraction-0.18.12-NeoForge-1.21.1.jar'))
+}
+tasks.withType(JavaCompile).configureEach { options.encoding = 'UTF-8' }
+
+// Integration fixtures are compiled only for explicit development test runs.
+if (providers.gradleProperty('gameTests').isPresent()) {
+    sourceSets.main.java.srcDir 'src/gametest/java'
+    sourceSets.main.resources.srcDir 'src/gametest/resources'
+}

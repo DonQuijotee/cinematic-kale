@@ -1,0 +1,17 @@
+[
+  {
+    "file": "CinematicInteraction-0.18.12-NeoForge-1.21.1.jar",
+    "url": "https://github.com/dcvke/CinematicInteractions/releases/download/v0.18.12-neoforge-1.21.1/CinematicInteraction-0.18.12-NeoForge-1.21.1.jar",
+    "sha256": "f8593eff597be7616d109572d880da43c9699684964dba166b97f30bd1c52340"
+  },
+  {
+    "file": "Cinematic.Interaction-NeoForge-1.21.1-0.18.28.jar",
+    "url": "https://github.com/dcvke/CinematicInteractions/releases/download/v0.18.28-neoforge-1.21.1-beta/Cinematic.Interaction-NeoForge-1.21.1-0.18.28.jar",
+    "sha256": "a710efafdee42186611fa8f4468acac5f14fa55bf4ff3c8386b13ee3fa81b997"
+  },
+  {
+    "file": "kaleidoscopecookery-1.6.0-neoforge+mc1.21.1.jar",
+    "url": "https://github.com/KaleidoscopeMods/KaleidoscopeCookery/releases/download/snapshot-2026-09-26-14-06-32/kaleidoscopecookery-1.6.0-neoforge+mc1.21.1.jar",
+    "sha256": "e93784a3f17e546ebfa7c449572933bf67c6b694c01cb26b83ad120c40452b33"
+  }
+]

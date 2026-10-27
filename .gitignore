@@ -1,0 +1,8 @@
+.gradle/
+build/
+run/
+libs/*.jar
+*.log
+
+# Keep the validation evidence referenced by the documentation.
+!docs/logs/*.log

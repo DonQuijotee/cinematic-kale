@@ -1,0 +1,128 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.8/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :createMinecraftArtifacts UP-TO-DATE
+> Task :compileJava
+> Task :processResources UP-TO-DATE
+> Task :classes
+> Task :downloadAssets UP-TO-DATE
+> Task :writeGameTestServerLegacyClasspath UP-TO-DATE
+> Task :prepareGameTestServerRun UP-TO-DATE
+
+> Task :runGameTestServer
+WARN StatusConsoleListener Advanced terminal features are not available in this environment
+[12:55:25] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeserverdev, --gameDir, ., --fml.fmlVersion, 4.0.42, --fml.mcVersion, 1.21.1, --fml.neoForgeVersion, 21.1.230, --fml.neoFormVersion, 20240808.144430]
+[12:55:25] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: JVM identified as Eclipse Adoptium OpenJDK 64-Bit Server VM 21.0.9+10-LTS
+[12:55:25] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher 11.0.5+main.901c6ea8 starting: java version 21.0.9 by Eclipse Adoptium; OS Linux arch amd64 version 6.18.55
+[12:55:26] [main/INFO] [ne.ne.fm.lo.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgeserverdev
+[12:55:26] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=union:/workspace/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.2+mixin.0.8.7/2af2f021d8e02a0220dc27a7a72b4666d66d44ca/sponge-mixin-0.15.2+mixin.0.8.7.jar%2394!/ Service=ModLauncher Env=SERVER
+[12:55:26] [main/INFO] [ne.ne.fm.lo.mo.lo.JarInJarDependencyLocator/]: Found 2 dependencies adding them to mods collection
+[12:55:26] [main/INFO] [ne.ne.fm.lo.mo.ModDiscoverer/]: 
+     Mod List:
+		Name Version (Mod Id)
+
+		Cinematic Interactions 0.18.12 (cinematic)
+		Kaleidoscope Cinematic 0.1.0-alpha (kaleidoscope_cinematic)
+		Kaleidoscope Cookery 1.6.0-neoforge+mc1.21.1 (kaleidoscope_cookery)
+		Minecraft 1.21.1 (minecraft)
+		NeoForge 21.1.230 (neoforge)
+[12:55:26] [main/INFO] [mixin/]: Compatibility level set to JAVA_21
+[12:55:26] [main/INFO] [cp.mo.mo.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeserverdev' with arguments [--gameDir, .]
+[12:55:26] [main/WARN] [mixin/]: Reference map 'kaleidoscope_cookery.refmap.json' for kaleidoscope_cookery.mixins.json could not be read. If this is a development environment you can ignore this message
+[12:55:27] [main/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.3).
+[12:55:29] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[12:55:30] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[12:55:30] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[12:55:30] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[12:55:30] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[12:55:30] [modloading-worker-0/INFO] [ne.ne.ne.co.NeoForgeMod/NEOFORGE-MOD]: NeoForge mod loading, version 21.1.230, for MC 1.21.1
+[12:55:30] [main/INFO] [mojang/YggdrasilAuthenticationService]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[12:55:30] [main/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/workspace/cinematic-kale/build/moddev/artifacts/neoforge-21.1.230.jar%23125!/assets/.mcassetsroot' uses unexpected schema
+[12:55:30] [main/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/workspace/cinematic-kale/build/moddev/artifacts/neoforge-21.1.230.jar%23125!/data/.mcassetsroot' uses unexpected schema
+[12:55:30] [main/INFO] [ne.ne.ne.ga.GameTestHooks/]: Enabled Gametest Namespaces: [kaleidoscope_cinematic]
+[12:55:30] [Yggdrasil Key Fetcher/ERROR] [mojang/YggdrasilServicesKeyInfo]: Failed to request yggdrasil public key
+com.mojang.authlib.exceptions.MinecraftClientException: Failed to read from https://api.minecraftservices.com/publickeys due to Connection refused
+	at MC-BOOTSTRAP/authlib@6.0.54/com.mojang.authlib.minecraft.client.MinecraftClient.readInputStream(MinecraftClient.java:108) ~[authlib-6.0.54.jar%2377!/:?] {}
+	at MC-BOOTSTRAP/authlib@6.0.54/com.mojang.authlib.minecraft.client.MinecraftClient.get(MinecraftClient.java:57) ~[authlib-6.0.54.jar%2377!/:?] {}
+	at MC-BOOTSTRAP/authlib@6.0.54/com.mojang.authlib.yggdrasil.YggdrasilServicesKeyInfo.fetch(YggdrasilServicesKeyInfo.java:114) ~[authlib-6.0.54.jar%2377!/:?] {}
+	at MC-BOOTSTRAP/authlib@6.0.54/com.mojang.authlib.yggdrasil.YggdrasilServicesKeyInfo$1.run(YggdrasilServicesKeyInfo.java:89) ~[authlib-6.0.54.jar%2377!/:?] {}
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?] {}
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?] {}
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[?:?] {}
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?] {}
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?] {}
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?] {}
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[?:?] {}
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682) ~[?:?] {}
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549) ~[?:?] {}
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592) ~[?:?] {}
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[?:?] {}
+	at java.base/java.net.Socket.connect(Socket.java:751) ~[?:?] {}
+	at java.base/sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:304) ~[?:?] {}
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178) ~[?:?] {}
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:531) ~[?:?] {}
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:636) ~[?:?] {}
+	at java.base/sun.net.www.protocol.https.HttpsClient.<init>(HttpsClient.java:264) ~[?:?] {}
+	at java.base/sun.net.www.protocol.https.HttpsClient.New(HttpsClient.java:377) ~[?:?] {}
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(AbstractDelegateHttpsURLConnection.java:193) ~[?:?] {}
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1302) ~[?:?] {}
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1143) ~[?:?] {}
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:179) ~[?:?] {}
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1705) ~[?:?] {}
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1629) ~[?:?] {}
+	at java.base/java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:531) ~[?:?] {}
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getResponseCode(HttpsURLConnectionImpl.java:307) ~[?:?] {}
+	at MC-BOOTSTRAP/authlib@6.0.54/com.mojang.authlib.minecraft.client.MinecraftClient.readInputStream(MinecraftClient.java:84) ~[authlib-6.0.54.jar%2377!/:?] {}
+	... 9 more
+[12:55:30] [Worker-Main-2/ERROR] [minecraft/TagLoader]: Couldn't load tag kaleidoscope_cookery:cookery_mod_items as it is missing following references: 
+	kaleidoscope_cookery:kalc/quark/cook_stool_azalea (from mod/kaleidoscope_cookery)
+	kaleidoscope_cookery:kalc/quark/cook_stool_ancient (from mod/kaleidoscope_cookery)
+	kaleidoscope_cookery:kalc/quark/cook_stool_blossom (from mod/kaleidoscope_cookery)
+	kaleidoscope_cookery:kalc/quark/chair_azalea (from mod/kaleidoscope_cookery)
+	kaleidoscope_cookery:kalc/quark/chair_ancient (from mod/kaleidoscope_cookery)
+	kaleidoscope_cookery:kalc/quark/chair_blossom (from mod/kaleidoscope_cookery)
+	kaleidoscope_cookery:kalc/quark/table_azalea (from mod/kaleidoscope_cookery)
+	kaleidoscope_cookery:kalc/quark/table_ancient (from mod/kaleidoscope_cookery)
+	kaleidoscope_cookery:kalc/quark/table_blossom (from mod/kaleidoscope_cookery)
+[12:55:30] [Worker-Main-4/ERROR] [minecraft/TagLoader]: Couldn't load tag carryon:block_blacklist as it is missing following references: 
+	kaleidoscope_cookery:kalc/quark/cook_stool_azalea (from mod/kaleidoscope_cookery)
+	kaleidoscope_cookery:kalc/quark/chair_ancient (from mod/kaleidoscope_cookery)
+	kaleidoscope_cookery:kalc/quark/table_blossom (from mod/kaleidoscope_cookery)
+	kaleidoscope_cookery:kalc/quark/cook_stool_ancient (from mod/kaleidoscope_cookery)
+	kaleidoscope_cookery:kalc/quark/chair_azalea (from mod/kaleidoscope_cookery)
+	kaleidoscope_cookery:kalc/quark/cook_stool_blossom (from mod/kaleidoscope_cookery)
+	kaleidoscope_cookery:kalc/quark/table_ancient (from mod/kaleidoscope_cookery)
+	kaleidoscope_cookery:kalc/quark/chair_blossom (from mod/kaleidoscope_cookery)
+	kaleidoscope_cookery:kalc/quark/table_azalea (from mod/kaleidoscope_cookery)
+[12:55:31] [main/INFO] [minecraft/RecipeManager]: Loaded 1903 recipes
+[12:55:31] [main/INFO] [minecraft/AdvancementTree]: Loaded 1573 advancements
+[12:55:31] [main/INFO] [co.gi.ys.ka.KaleidoscopeCookery/]: Successfully loaded millstone bindable data
+[12:55:31] [main/WARN] [minecraft/MappedRegistry]: Not all defined tags for registry ResourceKey[minecraft:root / minecraft:item] are present in data pack: kaleidoscope_cookery:cookery_mod_items
+[12:55:31] [Server thread/INFO] [minecraft/MinecraftServer]: Preparing start region for dimension minecraft:overworld
+[12:55:31] [worldgen/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 2%
+[12:55:31] [Server thread/INFO] [minecraft/LoggerChunkProgressListener]: Time elapsed: 337 ms
+[12:55:31] [Server thread/INFO] [minecraft/GameTestServer]: Started game test server
+[12:55:31] [Server thread/INFO] [ne.ne.ne.se.pe.PermissionAPI/]: Successfully initialized permission handler neoforge:default_handler
+[12:55:31] [Server thread/INFO] [minecraft/GameTestServer]: 3 tests are now running at position -1163508, -59, -7790595!
+[12:55:32] [Server thread/INFO] [minecraft/GameTestRunner]: Running test batch 'defaultBatch:0' (3 tests)...
+[12:55:32] [Server thread/INFO] [minecraft/GameTestServer]: [   ]
+[12:55:32] [Server thread/INFO] [minecraft/GameTestServer]: [___]
+[12:55:32] [Server thread/INFO] [minecraft/GameTestServer]: [+__]
+[12:55:32] [Server thread/INFO] [minecraft/GameTestServer]: [+++]
+[12:55:32] [Server thread/INFO] [minecraft/GameTestServer]: ========= 3 GAME TESTS COMPLETE IN 477.7 ms ======================
+[12:55:32] [Server thread/INFO] [minecraft/GameTestServer]: All 3 required tests passed :)
+[12:55:32] [Server thread/INFO] [minecraft/GameTestServer]: ====================================================
+[12:55:32] [Server thread/INFO] [minecraft/MinecraftServer]: Stopping server
+[12:55:32] [Server thread/INFO] [minecraft/MinecraftServer]: Saving players
+[12:55:32] [Server thread/INFO] [minecraft/MinecraftServer]: Saving worlds
+[12:55:32] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[Test Level]'/minecraft:overworld
+[12:55:33] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[Test Level]'/minecraft:the_nether
+[12:55:33] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[Test Level]'/minecraft:the_end
+[12:55:33] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[12:55:33] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[12:55:33] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[12:55:33] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage: All dimensions are saved
+[12:55:33] [Server thread/INFO] [minecraft/GameTestServer]: Game test server shutting down
+
+BUILD SUCCESSFUL in 13s
+7 actionable tasks: 2 executed, 5 up-to-date

@@ -1,0 +1,67 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.8/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Task :createMinecraftArtifacts
+Loaded 116 artifacts from /workspace/cinematic-kale/build/tmp/createMinecraftArtifacts/nfrt_artifact_manifest.properties
+*** Started working on downloadJson
+  ↓ https://launchermeta.mojang.com/mc/game/version_manifest_v2.json
+Total runtime: 5.47s
+
+net.neoforged.neoform.runtime.graph.NodeExecutionException: Node action for downloadJson failed
+	at net.neoforged.neoform.runtime.engine.NeoFormEngine.runNode(NeoFormEngine.java:524)
+	at net.neoforged.neoform.runtime.engine.NeoFormEngine.lambda$getWaitCondition$5(NeoFormEngine.java:470)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPerTaskExecutor$TaskRunner.run(ThreadPerTaskExecutor.java:314)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:329)
+Caused by: java.io.IOException: Tunnel failed, got: 403
+	at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:970)
+	at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:133)
+	at net.neoforged.neoform.runtime.downloads.DownloadManager.download(DownloadManager.java:95)
+	at net.neoforged.neoform.runtime.downloads.DownloadManager.download(DownloadManager.java:52)
+	at net.neoforged.neoform.runtime.artifacts.ArtifactManager.getLauncherManifest(ArtifactManager.java:205)
+	at net.neoforged.neoform.runtime.artifacts.ArtifactManager.lambda$getVersionManifest$3(ArtifactManager.java:183)
+	at net.neoforged.neoform.runtime.artifacts.ArtifactManager.download(ArtifactManager.java:291)
+	at net.neoforged.neoform.runtime.artifacts.ArtifactManager.getVersionManifest(ArtifactManager.java:182)
+	at net.neoforged.neoform.runtime.actions.DownloadVersionManifestAction.run(DownloadVersionManifestAction.java:20)
+	at net.neoforged.neoform.runtime.engine.NeoFormEngine.runNode(NeoFormEngine.java:513)
+	... 4 more
+Caused by: java.io.IOException: Tunnel failed, got: 403
+	at java.net.http/jdk.internal.net.http.PlainTunnelingConnection.lambda$connectAsync$2(PlainTunnelingConnection.java:96)
+	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1150)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.postFire(CompletableFuture.java:614)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:653)
+	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$DelegatingExecutor.execute(HttpClientImpl.java:177)
+	at java.base/java.util.concurrent.CompletableFuture$UniCompletion.claim(CompletableFuture.java:572)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2179)
+	at java.net.http/jdk.internal.net.http.Http1Response$HeadersReader.handle(Http1Response.java:610)
+	at java.net.http/jdk.internal.net.http.Http1Response$HeadersReader.handle(Http1Response.java:536)
+	at java.net.http/jdk.internal.net.http.Http1Response$Receiver.accept(Http1Response.java:527)
+	at java.net.http/jdk.internal.net.http.Http1Response$HeadersReader.tryAsyncReceive(Http1Response.java:583)
+	at java.net.http/jdk.internal.net.http.Http1AsyncReceiver.flush(Http1AsyncReceiver.java:233)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$LockingRestartableTask.run(SequentialScheduler.java:182)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$CompleteRestartableTask.run(SequentialScheduler.java:149)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$SchedulableTask.run(SequentialScheduler.java:207)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+> Task :createMinecraftArtifacts FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':createMinecraftArtifacts'.
+> Process 'command '/workspace/tools/jdk-21.0.9+10/bin/java'' finished with non-zero exit value 1
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 10s
+1 actionable task: 1 executed
